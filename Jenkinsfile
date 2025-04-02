@@ -4,13 +4,13 @@ pipeline {
     stages {
             stage('Compile and Clean') { 
                 steps {
-                       bat 'mvn compile'
+                       sh 'mvn compile'
                       }
             }
        
 	        stage('Junit5 Test') { 
                  steps {
-	                bat 'mvn test'
+	               sh 'mvn test'
                   }
             }
 
