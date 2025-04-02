@@ -2,15 +2,20 @@ pipeline {
     agent any
     
     stages {
+	    tools{
+		maven 'maven1'
+	    }
+	    
             stage('Compile and Clean') { 
                 steps {
-                       sh 'mvn compile'
+                      bat 'mvn clean install'
                       }
             }
        
 	        stage('Junit5 Test') { 
                  steps {
-	               sh 'mvn test'
+	               //bat 'mvn test'
+			 echo 'test'
                   }
             }
 
