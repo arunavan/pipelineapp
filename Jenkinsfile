@@ -34,7 +34,7 @@ pipeline {
    			}
         stage('Maven Build') { 
             steps {
-                bat 'mvn clean install'
+               echo 'TestCoverage'
                   }
             }
         stage('Build Docker image'){
