@@ -2,9 +2,7 @@ pipeline {
     agent any
     
     stages {
-	    tools{
-		maven 'maven1'
-	    }
+	   
 	    
             stage('Compile and Clean') { 
                 steps {
