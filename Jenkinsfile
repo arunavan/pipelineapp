@@ -4,7 +4,7 @@ pipeline {
         maven 'maven1'
     }
     stages {
-        stage('Build') {
+        stage('Maven clean') {
             steps {
                 
                     sh 'mvn clean'
